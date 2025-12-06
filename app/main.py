@@ -2,11 +2,9 @@ from fastapi import FastAPI, Request
 from aiogram import Bot, Dispatcher
 from aiogram.types import Update
 from app.config import BOT_TOKEN, WEBHOOK_URL, WEBHOOK_PATH
-from app.handlers import router
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
-dp.include_router(router)
 
 app = FastAPI()
 
